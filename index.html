@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="ajax.js"></script>
+
+    <style>
+        body{
+            background-color: rgb(130, 148, 130);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container{
+            width: 50%;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        form > table{
+            margin: 20px;
+        }
+        form > button{
+            /* text-align: center; */
+            margin: 0 auto;
+            margin-bottom: 10px;
+            width: 50%;
+            height: 30px;
+            border-radius: 15px;
+        }
+        #content{
+            width:100%;
+            display: flex;
+        }
+        #content th{
+            text-align: left;
+        }
+        #content table{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>ajax with php and mysql</h1>
+    <p id="message"></p>
+    <div class="container">
+        <form method="POST" id="form">
+            <table>
+                <tr>
+                    <th><label for="idn">id : </label></th>
+                    <td></label><input type="text" id="idn" name="idn"></td>
+                </tr>
+                <tr>
+                    <th><label for="name">Name : </label></th>
+                    <td></label><input type="text" id="name" name="name"></td>
+                </tr>
+                <tr>
+                    <th><label for="email">E-mail : </label></th>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <th><label for="password">Password : </label></th>
+                    <td><input type="password" id="password" name="password"></td>
+                </tr>
+            </table>
+            <button type="submit" name="insert" id="insert">submit</button>
+            <button type="submit" name="update" id="update">update</button>
+            <button type="submit" name="delete" id="delete">delete</button>
+        </form>
+        <button id="load">load</button>
+        <div id="content"></div>
+
+        
+    </div>
+</body>
+</html>
